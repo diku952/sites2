@@ -1,0 +1,1 @@
+$(window).on('load',function(){let publicationAside=$('.publication-aside');if(publicationAside.length>0){publicationAside.stickySidebar({topSpacing:119,containerSelector:'.pub-aside-wrap',innerWrapperSelector:'.inner-wrapper-sticky',minWidth:992});}});

@@ -1,0 +1,75 @@
+.hot-menu-wrap {
+  position: relative;
+  padding: 0 0 44px!important;
+  z-index: 1;
+}
+.hot-menu {
+  position: absolute;
+  width: 100%;
+  padding: 8px 0 9px;
+  background-color: #e9ecef;
+  z-index: 1;
+}
+.hot-menu.fixed {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: unset;
+}
+.hot-menu.fixed.banner-visible {
+  top: 150px;
+}
+.hot-menu::before {
+  position: absolute;
+  content: "";
+  left: -100%;
+  right: -100%;
+  background: #e9ecef;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  transition: background-color 0.3s;
+}
+.hot-menu.transition::before {
+  background: #c47e73;
+}
+.hot-menu.transition ul:before {
+  transform: scale(1.5);
+}
+.hot-menu.transition ul .pgmenu-link-hot {
+  color: #ffffff;
+}
+.hot-menu ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.hot-menu ul:before {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 10px;
+  height: 14px;
+  margin-right: 24px;
+  background: url(/images/svg/hot.svg) center no-repeat;
+  transition: transform 0.3s;
+}
+.hot-menu ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2px 24px 2px 0;
+  margin-top: 0;
+}
+.hot-menu ul li + li {
+  margin-top: 0;
+}
+.hot-menu ul li:before {
+  display: none;
+}
+.hot-menu ul li:last-child {
+  padding-right: 0;
+}
+/*# sourceMappingURL=hotMenu.css.map */
